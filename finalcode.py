@@ -91,17 +91,6 @@ def adjust_light(image):
     image = cv2.adaptiveThreshold(image,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,11,2)
     return image
 
-"""ap = argparse.ArgumentParser()
-ap.add_argument('-i', '--image', required=True,
-                help = 'path to input image')
-ap.add_argument('-c', '--config', required=True,
-                help = 'path to yolo config file')
-ap.add_argument('-w', '--weights', required=True,
-                help = 'path to yolo pre-trained weights')
-ap.add_argument('-cl', '--classes', required=True,
-                help = 'path to text file containing class names')
-args = ap.parse_args()"""
-
 def pyt(image):
     # show the output image
 #print("[INFO] angle: {:.3f}".format(angle))
@@ -265,9 +254,10 @@ while(True):
 vid.release()
 cv2.destroyAllWindows()
 
-test1 =(mode(list1)) 
+#BELOW CODE SEND THE MOST FREQUENT NUMBER FROM THE LIST1 TO THE WEB SERVER WHERE DATABASE IS MAINTAINED FOR ENTRY OR EXIT OF VEHICLES
+"""test1 =(mode(list1)) 
 url = 'http://7ca86d11.ngrok.io/security/in'
 body = {'vehicle': test1}
 headers = {'content-type': 'application/json'}
-requests.post(url, data=json.dumps(body), headers=headers)
+requests.post(url, data=json.dumps(body), headers=headers)"""
 
