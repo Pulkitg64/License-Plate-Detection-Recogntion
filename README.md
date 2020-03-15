@@ -1,5 +1,5 @@
 # License-Plate-Detection-Recogntion
-License Plate Detection is done using YOLO(You Only Look Once) model 
+License Plate Detection is done using YOLO(You Only Look Once) model <br>
 Recognition of characters from License Plate is done using Tesseract OCR
 
 ### Installation Guide
