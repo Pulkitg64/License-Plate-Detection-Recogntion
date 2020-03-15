@@ -18,7 +18,7 @@ import os
 endTime = datetime.datetime.now() + datetime.timedelta(minutes=3/10)
   
 list1 =[]
-
+#Paste the installed location of tesseract below(line no. 22) in place of "C:\Program Files\Tesseract-OCR\tesseract.exe"
 pytesseract.pytesseract.tesseract_cmd=r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 def get_grayscale(image):
@@ -115,7 +115,7 @@ def pyt(image):
     #image = match_template(image, template)
     
    
-
+    #Move the eng.user-patterns file to the tessdata folder of the Tesseract and copy the path of the file and replace with below location i.e "C:/Program Files/Tesseract-OCR/tessdata/eng.user-patterns"
     custom_config = '--psm 6 --user-patterns C:/Program Files/Tesseract-OCR/tessdata/eng.user-patterns  -c tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
     
     text = pytesseract.image_to_string(image, config=custom_config)
